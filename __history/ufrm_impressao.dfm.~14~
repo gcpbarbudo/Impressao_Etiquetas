@@ -1,0 +1,73 @@
+object frm_impressao: Tfrm_impressao
+  Left = 0
+  Top = 0
+  Caption = 'Impress'#227'o Etiquetas'
+  ClientHeight = 298
+  ClientWidth = 303
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesigned
+  PixelsPerInch = 96
+  TextHeight = 13
+  object rlr_etiqueta: TRLReport
+    Left = -1
+    Top = -3
+    Width = 302
+    Height = 302
+    Margins.LeftMargin = 5.000000000000000000
+    Margins.TopMargin = 5.000000000000000000
+    Margins.RightMargin = 5.000000000000000000
+    Margins.BottomMargin = 5.000000000000000000
+    Borders.Sides = sdCustom
+    Borders.DrawLeft = False
+    Borders.DrawTop = False
+    Borders.DrawRight = False
+    Borders.DrawBottom = False
+    DataSource = ufrmPrincipal.dsdados
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Courier New'
+    Font.Style = []
+    PageSetup.PaperSize = fpCustom
+    PageSetup.PaperWidth = 80.000000000000000000
+    PageSetup.PaperHeight = 80.000000000000000000
+    PreviewOptions.ShowModal = True
+    object RLDetailGrid2: TRLDetailGrid
+      Left = 19
+      Top = 19
+      Width = 264
+      Height = 47
+      Margins.LeftMargin = 0.250000000000000000
+      Margins.TopMargin = 0.250000000000000000
+      Margins.RightMargin = 0.250000000000000000
+      Margins.BottomMargin = 0.250000000000000000
+      Borders.Sides = sdCustom
+      Borders.DrawLeft = False
+      Borders.DrawTop = False
+      Borders.DrawRight = False
+      Borders.DrawBottom = False
+      object RLDBBarcode1: TRLDBBarcode
+        AlignWithMargins = True
+        Left = 1
+        Top = 1
+        Width = 262
+        Height = 45
+        Margins.LeftMargin = 1.000000000000000000
+        Margins.RightMargin = 1.000000000000000000
+        Align = faClient
+        Alignment = taCenter
+        BarcodeType = bcCode128C
+        CheckSumMethod = cmNone
+        DataField = 'CODIGO'
+        DataSource = ufrmPrincipal.dsdados
+        ShowText = boCode
+      end
+    end
+  end
+end

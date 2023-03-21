@@ -1,0 +1,137 @@
+object ufrmPrincipal: TufrmPrincipal
+  Left = 0
+  Top = 0
+  Caption = 'C'#243'digo de Barras'
+  ClientHeight = 654
+  ClientWidth = 368
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 368
+    Height = 137
+    Align = alTop
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 16
+      Top = 8
+      Width = 119
+      Height = 13
+      Caption = 'Digite o c'#243'digo de barras'
+    end
+    object bntCapturar: TButton
+      Left = 16
+      Top = 55
+      Width = 337
+      Height = 34
+      Action = acCapturar
+      TabOrder = 0
+    end
+    object edtPesquisa: TEdit
+      Left = 16
+      Top = 28
+      Width = 337
+      Height = 21
+      TabOrder = 1
+      OnKeyPress = edtPesquisaKeyPress
+    end
+    object btnLImpar: TButton
+      Left = 16
+      Top = 95
+      Width = 161
+      Height = 25
+      Action = acLimpar
+      TabOrder = 2
+    end
+    object btnImprimir: TButton
+      Left = 192
+      Top = 95
+      Width = 161
+      Height = 25
+      Action = acImprimir
+      TabOrder = 3
+    end
+  end
+  object pnlTotal: TPanel
+    AlignWithMargins = True
+    Left = 3
+    Top = 630
+    Width = 362
+    Height = 21
+    Align = alBottom
+    Caption = 'Sem Contagem'
+    TabOrder = 1
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Top = 137
+    Width = 368
+    Height = 490
+    Margins.Left = 10
+    Margins.Top = 10
+    Margins.Right = 10
+    Margins.Bottom = 10
+    Align = alClient
+    Caption = 'C'#243'digos Capturados'
+    TabOrder = 2
+    object dbdCodigos: TDBGrid
+      AlignWithMargins = True
+      Left = 5
+      Top = 18
+      Width = 358
+      Height = 467
+      Align = alClient
+      BiDiMode = bdLeftToRight
+      BorderStyle = bsNone
+      DataSource = dsdados
+      ParentBiDiMode = False
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+    end
+  end
+  object cdsdados: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 280
+    Top = 585
+    object cdsdadosCODIGO: TStringField
+      FieldName = 'CODIGO'
+    end
+  end
+  object Action: TActionList
+    Left = 232
+    Top = 584
+    object acCapturar: TAction
+      Caption = 'Capturar'
+      OnExecute = acCapturarExecute
+    end
+    object acImprimir: TAction
+      Caption = 'Imprimir'
+      OnExecute = acImprimirExecute
+    end
+    object acLimpar: TAction
+      Caption = 'Limpar'
+      OnExecute = acLimparExecute
+    end
+  end
+  object dsdados: TDataSource
+    DataSet = cdsdados
+    Left = 328
+    Top = 585
+  end
+end

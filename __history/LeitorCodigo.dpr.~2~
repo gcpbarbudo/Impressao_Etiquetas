@@ -1,0 +1,16 @@
+program LeitorCodigo;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {ufrmPrincipal},
+  uOpcoes in 'uOpcoes.pas' {ufrmOpcoes};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TufrmPrincipal, ufrmPrincipal);
+  Application.CreateForm(TufrmOpcoes, ufrmOpcoes);
+  Application.Run;
+end.

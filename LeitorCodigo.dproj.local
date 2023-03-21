@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/10/17 16:29:59.000.119,=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/10/26 11:05:52.000.324,=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/17 10:52:32.000.408,=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/18 15:26:01.000.523,=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/11/24 13:37:00.000.465,=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 17:18:14.000.112,=C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 17:49:01.000.067,C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\uPrincipal.dfm</Transaction>
+    <Transaction>2023/01/23 17:49:01.000.067,C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\uPrincipal.pas</Transaction>
+    <Transaction>2023/01/23 17:49:29.000.558,C:\Users\guilherme.barbudo\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\LeitorCodigo.dproj</Transaction>
+    <Transaction>2023/01/23 17:59:14.000.856,=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.pas</Transaction>
+    <Transaction>2023/01/23 18:01:16.000.965,C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.pas=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\uOpcoes.pas</Transaction>
+    <Transaction>2023/01/23 18:01:16.000.965,C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.dfm=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\uOpcoes.dfm</Transaction>
+    <Transaction>2023/01/28 11:22:24.000.667,=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.pas</Transaction>
+    <Transaction>2023/01/28 11:26:48.000.823,C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\ufrm_impressao.dfm=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.dfm</Transaction>
+    <Transaction>2023/01/28 11:26:48.000.823,C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\ufrm_impressao.pas=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.pas</Transaction>
+    <Transaction>2023/01/28 15:42:04.000.558,=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.pas</Transaction>
+    <Transaction>2023/01/28 15:42:35.000.632,=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.pas</Transaction>
+    <Transaction>2023/01/28 15:43:28.000.501,C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\udmCodigo_de_Barras.pas=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.pas</Transaction>
+    <Transaction>2023/01/28 15:43:28.000.501,C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\udmCodigo_de_Barras.dfm=C:\Guilherme Barbudo\Estudo\Delphi\P21 - Impressao de Etiquetas\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>

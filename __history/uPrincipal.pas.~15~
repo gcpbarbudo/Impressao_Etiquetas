@@ -1,0 +1,106 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Datasnap.DBClient, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, System.Actions, Vcl.ActnList;
+
+type
+  TufrmPrincipal = class(TForm)
+    Panel1: TPanel;
+    bntCapturar: TButton;
+    pnlTotal: TPanel;
+    Label1: TLabel;
+    edtPesquisa: TEdit;
+    btnLImpar: TButton;
+    btnImprimir: TButton;
+    GroupBox1: TGroupBox;
+    dbdCodigos: TDBGrid;
+    cdsdados: TClientDataSet;
+    Action: TActionList;
+    acCapturar: TAction;
+    acImprimir: TAction;
+    cdsdadosCODIGO: TStringField;
+    dsdados: TDataSource;
+    acLimpar: TAction;
+    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure acCapturarExecute(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure edtPesquisaKeyPress(Sender: TObject; var Key: Char);
+    procedure acImprimirExecute(Sender: TObject);
+    procedure acLimparExecute(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ufrmPrincipal: TufrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses ufrm_impressao, udmCodigo_de_Barras, uOpcoes;
+
+procedure TufrmPrincipal.acCapturarExecute(Sender: TObject);
+var
+cont : real;
+begin
+//Capturar
+  cdsDados.OPEN;
+  if edtPesquisa.Text <> '' then
+  begin
+    cdsDados.Append;
+    cdsDadosCODIGO.AsString := edtPesquisa.Text;
+    cdsDados.Post;
+    edtPesquisa.Clear;
+    edtPesquisa.SetFocus;
+    cont := cont + 1;
+    pnlTotal.Caption := FloatToStr(cont) + ' CODIGOS LIDOS';
+  end;
+
+end;
+
+
+procedure TufrmPrincipal.acImprimirExecute(Sender: TObject);
+begin
+  frm_impressao := Tfrm_impressao.Create(Self);
+  frm_impressao.rlr_etiqueta.Preview();
+end;
+
+procedure TufrmPrincipal.acLimparExecute(Sender: TObject);
+begin
+//Limpar
+  cdsdados.Close;
+  cdsdados.CreateDataSet;
+  edtPesquisa.SetFocus;
+end;
+
+procedure TufrmPrincipal.edtPesquisaKeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #13 then
+  acCapturarExecute(Self);
+end;
+
+procedure TufrmPrincipal.FormCreate(Sender: TObject);
+begin
+  cdsDados.CreateDataSet;
+end;
+
+procedure TufrmPrincipal.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #13 then
+  acCapturarExecute(Self);
+end;
+
+procedure TufrmPrincipal.FormShow(Sender: TObject);
+begin
+  edtPesquisa.SetFocus;
+end;
+
+end.
